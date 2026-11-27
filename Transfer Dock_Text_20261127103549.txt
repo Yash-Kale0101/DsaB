@@ -1,0 +1,594 @@
+
+### 1\. First understand which project to create
+
+Before opening Visual Studio, read the first line of the question. It usually tells you which project type to use.
+
+| Words in your question                        | Project to create                                            |
+| --------------------------------------------- | ------------------------------------------------------------ |
+| Write a C# program                            | Console App                                                  |
+| Read numbers, arrays, strings, loops, methods | Console App                                                  |
+| Design a form                                 | Windows Forms App                                            |
+| TextBox, Button, Label, ListBox               | Windows Forms App                                            |
+| Create an ASP.NET webpage                     | ASP.NET Web Forms                                            |
+| Session, ViewState, QueryString               | ASP.NET Web Forms                                            |
+| SqlConnection, SqlCommand, SqlDataReader      | Console App or Windows Forms, depending on question          |
+| DataSet, DataGridView, SqlDataAdapter         | Usually Windows Forms                                        |
+| SQL Server, INSERT, UPDATE, DELETE            | ADO.NET Database project using the required application type |
+
+Don't select a project randomly. The project type determines which files you'll edit and how you'll execute the program.
+
+### 2\. Prepare Visual Studio properly
+
+You should ideally have Visual Studio 2022 and SQL Server installed.
+
+### Step 1 — Open Visual Studio
+
+* Press the Windows key on your keyboard.
+
+* Type `Visual Studio`.
+
+* Open Visual Studio.
+
+* Wait for the start screen.
+
+* Click Create a new project.
+
+
+### Step 2 — Understand the project selection screen
+
+You will see a search box and project templates.
+
+You can search for:
+
+* `Console App`
+
+* `Windows Forms App`
+
+* `ASP.NET Web Application`
+
+Make sure you select the correct language: C#.
+
+### Step 3 — Important framework difference
+
+There are two types of project templates you must understand:
+
+* Modern .NET, such as .NET 8 or .NET 10.
+
+* .NET Framework, such as .NET Framework 4.8.
+
+For your practical slip:
+
+| Project                  | Recommended template                                                          |
+| ------------------------ | ----------------------------------------------------------------------------- |
+| Console C#               | Console App                                                                   |
+| Windows Forms            | Windows Forms App                                                             |
+| ASP.NET Web Forms        | ASP.NET Web Application (.NET Framework)                                      |
+| Older ADO.NET practicals | Console App or Windows Forms App; use the framework compatible with your code |
+
+Critical: ASP.NET Web Forms is not supported by modern ASP.NET Core or modern .NET. You need the .NET Framework Web Forms template.
+
+If you cannot find it, open Visual Studio Installer from the Windows Start menu, click Modify for your Visual Studio installation, and check the ASP.NET and web development workload. Also check that the relevant .NET Framework targeting pack is installed.
+
+### 3\. Type 1 — Normal C# Console Application
+
+This is the simplest type of practical. Your question slip includes arithmetic, even/odd, prime numbers, factorial, arrays, linear search, methods, strings, grades and menu-driven programs.
+
+### A. Create the project
+
+* Open Visual Studio.
+
+* Click Create a new project.
+
+* Search `Console App`.
+
+* Select Console App with C#.
+
+* Click Next.
+
+* Project name: `CSharpPractical`.
+
+* Choose your project location.
+
+* Click Next.
+
+* Select an installed .NET version.
+
+* Click Create.
+
+### B. Find where to paste code
+
+Once the project opens:
+
+* Look on the right side for Solution Explorer.
+
+* Find your project name.
+
+* Expand it using the small arrow if necessary.
+
+* Find `Program.cs`.
+
+* Double-click `Program.cs`.
+
+* The code editor will open.
+
+* Press `Ctrl + A`.
+
+* Paste your complete C# solution.
+
+* Press `Ctrl + S`.
+
+For example, if your practical asks for even or odd:
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        if (n % 2 == 0)
+            Console.WriteLine("Even Number");
+        else
+            Console.WriteLine("Odd Number");
+    }
+}
+```
+
+This entire code goes into `Program.cs`, replacing its existing contents.
+
+### C. How to run the program
+
+There are two common ways:
+
+Method 1:
+
+* Press `Ctrl + F5`.
+
+* This runs the program without debugging.
+
+Method 2:
+
+* Click the green Start triangle at the top.
+
+* This runs the program with debugging.
+
+A black console window will open.
+
+You will see:
+
+```text
+Enter a number:
+```
+
+Type your input and press Enter.
+
+### D. How to handle different types of Console questions
+
+You don't need a new project for every question. You can reuse the same project and replace `Program.cs` with the next complete solution.
+
+| Question topic       | Main C# concepts                 |
+| -------------------- | -------------------------------- |
+| Arithmetic           | Variables, operators, if         |
+| Even/odd             | Modulus %                        |
+| Largest of three     | Nested if-else                   |
+| Prime numbers        | Loops, conditions                |
+| Factorial            | for loop                         |
+| Arrays               | Array declaration, loops         |
+| Linear search        | Array traversal, comparison      |
+| User-defined methods | Method declaration and return    |
+| Strings              | Length, ToUpper(), Reverse logic |
+| Menu-driven programs | switch, do-while                 |
+| Student grades       | Arrays, conditions, counters     |
+
+### How to execute a menu-driven program
+
+A menu-driven program usually keeps running until the user chooses Exit.
+
+For example:
+
+```text
+1. Even or Odd
+2. Factorial
+3. Prime Number
+4. Exit
+
+Enter your choice:
+```
+
+You run it in exactly the same way. Enter a choice, press Enter, provide any additional input, and repeat until you select Exit.
+
+Common mistake: If a question asks for a complete program, don't paste only the `if` statement or loop. Paste the complete program, including `using`, class and `Main()` where required.
+
+### 4\. Type 2 — C# Windows Forms Application
+
+This is for practicals where you design a graphical interface.
+
+Your slip includes calculators, login forms, temperature conversion, hobbies, gender and city selection, ListBox operations, student results, food orders and database forms.
+
+Unlike Console Apps, you first design the interface and then write the code behind it.
+
+### A. Create a Windows Forms project
+
+* Open Visual Studio.
+
+* Click Create a new project.
+
+* Search `Windows Forms App`.
+
+* Select the C# version.
+
+* Click Next.
+
+* Enter project name: `WindowsFormsPractical`.
+
+* Click Next.
+
+* Select the framework shown in the project wizard.
+
+* Click Create.
+
+### B. Understand the three important areas
+
+Once your project opens, you need to know these:
+
+1\. Toolbox
+
+Contains controls you drag onto your form:
+
+* Button
+
+* TextBox
+
+* Label
+
+* CheckBox
+
+* RadioButton
+
+* ComboBox
+
+* ListBox
+
+* DataGridView
+
+    2\. Form Designer
+
+    The blank form where you arrange your controls. It represents the interface users will see.
+
+    3\. Properties
+
+    Lets you change the selected control's name, displayed text, size, colour and other properties.
+
+
+If Toolbox or Properties is missing:
+
+* Toolbox: View → Toolbox, or `Ctrl + Alt + X`.
+
+* Properties: View → Properties Window, or `F4`.
+
+* Solution Explorer: View → Solution Explorer, or `Ctrl + Alt + L`.
+
+### C. How to design any Windows Form
+
+Let's say the question asks you to make a calculator.
+
+You need:
+
+* Two TextBoxes for numbers.
+
+* Four Buttons for operations.
+
+* One Label for the answer.
+
+Follow these steps:
+
+* Open `Form1.cs`.
+
+* If the code appears instead of the form, right-click `Form1.cs` in Solution Explorer and choose View Designer.
+
+* Open Toolbox.
+
+* Search `TextBox`.
+
+* Drag two TextBoxes onto the form.
+
+* Search `Button`.
+
+* Drag four Buttons onto the form.
+
+* Search `Label`.
+
+* Drag one Label onto the form.
+
+### D. Change the control names
+
+This is extremely important. Your code needs to know which textbox or button you are referring to.
+
+Click the first TextBox once.
+
+Find Properties on the right. Locate `(Name)` and change it to:
+
+`txtNum1`
+
+Change the second TextBox to:
+
+`txtNum2`
+
+Change the Label to:
+
+`lblResult`
+
+For your buttons:
+
+| Button         | (Name) | Text |
+| -------------- | ------ | ---- |
+| Addition       | btnAdd | +    |
+| Subtraction    | btnSub | -    |
+| Multiplication | btnMul | *    |
+| Division       | btnDiv | /    |
+
+Remember:
+
+* `(Name)` is used by C# code.
+
+* `Text` is displayed on the screen.
+
+### E. Where to paste Windows Forms code
+
+This is where many beginners make mistakes.
+
+* Double-click the `+` button on your form.
+
+* Visual Studio opens `Form1.cs`.
+
+* It automatically generates a button-click method.
+
+* You will see something like:
+
+```csharp
+private void btnAdd_Click(object sender, EventArgs e)
+{
+
+}
+```
+
+5\. Paste the addition logic between the braces.
+
+```csharp
+double a = Convert.ToDouble(txtNum1.Text);
+double b = Convert.ToDouble(txtNum2.Text);
+
+lblResult.Text = "Result: " + (a + b);
+```
+
+6\. Save using `Ctrl + S`.
+
+Do the same for the other buttons, changing the calculation.
+
+Never paste your event-handling code into `Form1.Designer.cs`. That file is generated by Visual Studio to maintain the form layout. Put your logic in `Form1.cs`.
+
+### F. How to run a Windows Forms program
+
+* Save all files.
+
+* Press `F5` or click the green Start triangle.
+
+* Your form will open as a separate window.
+
+* Enter the numbers.
+
+* Click the operation button.
+
+* Check the result.
+
+### G. How to handle other Windows Forms questions
+
+You use the same project creation and design procedure for all of these.
+
+| Control needed in question | What to drag from Toolbox |
+| -------------------------- | ------------------------- |
+| Accept name, number, email | TextBox                   |
+| Display output             | Label                     |
+| Perform an operation       | Button                    |
+| Select multiple hobbies    | CheckBox                  |
+| Select only one gender     | RadioButton               |
+| Select a city              | ComboBox                  |
+| Add/remove list items      | ListBox                   |
+| Show database table        | DataGridView              |
+| Display popup message      | MessageBox.Show() in code |
+
+### Special instructions for common questions
+
+* Login form: Two TextBoxes and a Button. Use `txtPassword.UseSystemPasswordChar = true` if you want to hide the password.
+
+* Hobbies: Use multiple CheckBoxes and test their `.Checked` property.
+
+* Gender: Use RadioButtons and test `.Checked`.
+
+* City: Add choices to ComboBox using its `Items` collection.
+
+* ListBox: Use `Items.Add()`, `Items.Remove()` and `Items.Clear()`.
+
+* Clear button: Set TextBoxes to `""` and reset Labels or selections.
+
+* Calculator: Convert TextBox strings into numeric values before calculating. Check for division by zero.
+
+### 5\. Type 3 — ASP.NET Web Forms
+
+This is different from both Console and Windows Forms.
+
+Here, you create a website. The user enters information in a browser, clicks a button, and the server processes the request using C#.
+
+Your slip includes:
+
+* Welcome page.
+
+* Web calculator.
+
+* Background colour selection.
+
+* Feedback form.
+
+* Login using Session.
+
+* QueryString between two pages.
+
+* ViewState counter.
+
+* Registration form with validation.
+
+* Student result and quiz pages.
+
+### A. Create an ASP.NET Web Forms project
+
+This is the most important setup difference.
+
+* Open Visual Studio.
+
+* Click Create a new project.
+
+* Search for `ASP.NET Web Application (.NET Framework)`.
+
+* Select the C# template.
+
+* Click Next.
+
+* Enter project name: `WebFormsPractical`.
+
+* Choose your project location.
+
+* Click Create.
+
+* A new window will appear asking which template you want.
+
+* Select Web Forms.
+
+* You can leave authentication as No Authentication for these basic practicals.
+
+* Click Create.
+
+
+If you cannot find this template, use Visual Studio Installer and install the ASP.NET and web development workload and the required .NET Framework targeting pack.
+
+### B. Understand the Web Forms project files
+
+After creating the project, open Solution Explorer.
+
+You will find files such as:
+
+WebFormsPractical
+
+Default.aspx
+
+HTML + Web controls
+
+The page design: TextBoxes, Buttons, Labels, DropDownLists and other controls.
+
+Default.aspx.cs
+
+C# code
+
+The code-behind file: button-click events, calculations, validation logic and Session operations.
+
+Default.aspx.designer.cs
+
+Generated declarations for the page controls. Normally don't edit it manually.
+
+Web.config
+
+Website configuration, including settings and sometimes database connection strings.
+
+The most important rule:
+
+* HTML and ASP.NET server controls go into `Default.aspx`.
+
+* C# event code goes into `Default.aspx.cs`.
+
+Do not paste all the C# code into the `.aspx` file.
+
+### C. Create a simple webpage
+
+Suppose your question says:
+
+"Create an ASP.NET Web Forms page that accepts the user's name in a TextBox and displays a welcome message in a Label on a Button click."
+
+### Step 1: Open the design file
+
+* In Solution Explorer, find `Default.aspx`.
+
+* Double-click it.
+
+* You may see the Design, Source or Split view options.
+
+* Select Source.
+
+### Step 2: Paste the page design
+
+You can replace the contents of `Default.aspx` with this complete markup:
+
+```aspx
+<%@ Page Language="C#" AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs"
+    Inherits="WebFormsPractical.Default" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h2>Welcome Page</h2>
+
+        Enter Name:
+        <asp:TextBox ID="txtName"
+            runat="server"></asp:TextBox>
+
+        <asp:Button ID="btnSubmit"
+            runat="server"
+            Text="Submit"
+            OnClick="btnSubmit_Click" />
+
+        <br /><br />
+
+        <asp:Label ID="lblMessage"
+            runat="server"></asp:Label>
+    </form>
+</body>
+</html>
+```
+
+Important: `Inherits="WebFormsPractical.Default"` must match your actual project's namespace and page class. If your project has a different name, Visual Studio may generate a different namespace. Check the existing `Default.aspx` directive and preserve its correct `Inherits` value.
+
+### Step 3: Open the C# code-behind file
+
+* Go to Solution Explorer.
+
+* Expand `Default.aspx` using the small arrow beside it.
+
+* Find `Default.aspx.cs`.
+
+* Double-click it.
+
+* Find the `Default` page class.
+
+* Add this event method inside the class:
+
+```csharp
+protected void btnSubmit_Click(object sender, EventArgs e)
+{
+    lblMessage.Text = "Welcome " + txtName.Text;
+}
+```
+
+
+### Step 4: Run the website
+
+* Save both files.
+
+* In Solution Explorer, right-click `Default.aspx`.
+
+* Click S

@@ -1,0 +1,156 @@
+
+ 1. Open Visual Studio and create a project
+
+
+* Open Microsoft Visual Studio on your computer.
+
+* Click Create a new project.
+
+* In the search box, type `Console App`.
+
+* Select Console App (C#).
+
+* Click Next.
+
+* Enter project name: `Practical1`.
+
+* Select a location to save the project.
+
+* Click Create.
+
+ 2. Open the file where you paste code
+
+After creating the project:
+
+* Look at the right side of Visual Studio.
+
+* Find Solution Explorer.
+
+* Expand your project name if necessary.
+
+* Find `Program.cs`.
+
+* Double-click `Program.cs`.
+
+* You will see some existing C# code.
+
+* Press `Ctrl + A` to select everything.
+
+* Delete the existing code.
+
+* Copy the complete answer from your practical PDF.
+
+* Paste it into `Program.cs`.
+
+* Press `Ctrl + S` to save.
+
+ 3. Execute the program
+
+* At the top, find the green Start button.
+
+* Click the dropdown beside it if needed and select your project.
+
+* Press `Ctrl + F5` to run without debugging.
+
+* A black console window will open.
+
+* Enter the numbers or text requested by the question.
+
+* Press Enter to see the output.
+
+Console application completed
+
+4. How to run Windows Forms programs
+
+For questions involving TextBoxes, Buttons, Labels, CheckBoxes, etc., follow this procedure.
+
+* Go to File → New → Project.
+
+* Search `Windows Forms App`.
+
+* Select the C# Windows Forms project.
+
+* Name it `Practical2`.
+
+* Click Create.
+
+* In Solution Explorer, double-click `Form1.cs`.
+
+* Right-click the form and select View Designer if the designer isn't already open.
+
+* Open Toolbox using View → Toolbox.
+
+* Drag the required controls onto the form.
+
+For example, for a simple addition calculator:
+
+| Control   | Name property |
+| -------        | -------------              |
+| TextBox  | txtA                     |
+| TextBox  | txtB                     |
+| Button    | btnAdd                |
+| Label      | lblResult              |
+
+* Double-click the Add button.
+
+* Visual Studio will open `Form1.cs` and generate a button-click method.
+
+* Paste the relevant button-click code inside that method.
+
+* Save using Ctrl + S.
+
+* Press F5.
+
+Your Windows Form will open and you can interact with it.
+
+Important: Never paste your code into `Form1.Designer.cs`.
+
+5. How to run ASP.NET Web Forms programs
+
+* Create a new project.
+
+* Search for `ASP.NET Web Application (.NET Framework)`.
+
+* Select the project and click Create.
+
+* Select the Web Forms template.
+
+* Open `Default.aspx`.
+
+* Select Source view.
+
+* Paste the ASP.NET markup into the page.
+
+* Open `Default.aspx.cs`.
+
+* Paste the C# code into the page's class.
+
+* Right-click `Default.aspx` and select Set as Start Page.
+
+* Press F5.
+
+Note: ASP.NET Web Forms requires .NET Framework. It is not the same as ASP.NET Core.
+
+ 6. How to run ADO.NET database programs
+
+For database practicals:
+
+* Install SQL Server or SQL Server LocalDB.
+
+* Open SQL Server Management Studio (SSMS), or SQL Server Object Explorer in Visual Studio.
+
+* Connect to your SQL Server instance.
+
+* Open a New Query window.
+
+* First execute the database and table creation SQL supplied with the solution.
+
+* Create a Console App or Windows Forms project depending on the question.
+
+* Paste the C# code into `Program.cs` or `Form1.cs`, respectively.
+
+* Check that the connection string uses the correct server and database name.
+
+* Press F5 to execute.
+
+
